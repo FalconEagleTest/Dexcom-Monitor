@@ -12,101 +12,103 @@ Option Strict On
 Option Explicit On
 
 
-
-<Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
- Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")>  _
-Partial Friend NotInheritable Class Settings1
-    Inherits Global.System.Configuration.ApplicationSettingsBase
+Namespace My
     
-    Private Shared defaultInstance As Settings1 = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New Settings1()),Settings1)
-    
-    Public Shared ReadOnly Property [Default]() As Settings1
-        Get
-            Return defaultInstance
-        End Get
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property username() As String
-        Get
-            Return CType(Me("username"),String)
-        End Get
-        Set
-            Me("username") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property password() As String
-        Get
-            Return CType(Me("password"),String)
-        End Get
-        Set
-            Me("password") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("300")>  _
-    Public Property highlevel() As Integer
-        Get
-            Return CType(Me("highlevel"),Integer)
-        End Get
-        Set
-            Me("highlevel") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("70")>  _
-    Public Property lowlevel() As Integer
-        Get
-            Return CType(Me("lowlevel"),Integer)
-        End Get
-        Set
-            Me("lowlevel") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-    Public Property phonenumber() As Decimal
-        Get
-            Return CType(Me("phonenumber"),Decimal)
-        End Get
-        Set
-            Me("phonenumber") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property msghigh() As String
-        Get
-            Return CType(Me("msghigh"),String)
-        End Get
-        Set
-            Me("msghigh") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property msglow() As String
-        Get
-            Return CType(Me("msglow"),String)
-        End Get
-        Set
-            Me("msglow") = value
-        End Set
-    End Property
-End Class
+    <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")>  _
+    Partial Friend NotInheritable Class Settings1
+        Inherits Global.System.Configuration.ApplicationSettingsBase
+        
+        Private Shared defaultInstance As Settings1 = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New Settings1()),Settings1)
+        
+        Public Shared ReadOnly Property [Default]() As Settings1
+            Get
+                Return defaultInstance
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property username() As String
+            Get
+                Return CType(Me("username"),String)
+            End Get
+            Set
+                Me("username") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property password() As String
+            Get
+                Return CType(Me("password"),String)
+            End Get
+            Set
+                Me("password") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("300")>  _
+        Public Property highlevel() As Integer
+            Get
+                Return CType(Me("highlevel"),Integer)
+            End Get
+            Set
+                Me("highlevel") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("70")>  _
+        Public Property lowlevel() As Integer
+            Get
+                Return CType(Me("lowlevel"),Integer)
+            End Get
+            Set
+                Me("lowlevel") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property phonenumber() As Decimal
+            Get
+                Return CType(Me("phonenumber"),Decimal)
+            End Get
+            Set
+                Me("phonenumber") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property msghigh() As String
+            Get
+                Return CType(Me("msghigh"),String)
+            End Get
+            Set
+                Me("msghigh") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property msglow() As String
+            Get
+                Return CType(Me("msglow"),String)
+            End Get
+            Set
+                Me("msglow") = value
+            End Set
+        End Property
+    End Class
+End Namespace

@@ -1,29 +1,29 @@
 ﻿Public Class Settings_form
     Private Sub Settings_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtUsername.Text = Settings1.Default.username
-        txtPassword.Text = Settings1.Default.password
+        txtUsername.Text = My.Settings1.Default.username
+        txtPassword.Text = My.Settings1.Default.password
 
-        txtHighBg.Text = Settings1.Default.highlevel
-        TxtLowBg.Text = Settings1.Default.lowlevel
+        txtHighBg.Text = My.Settings1.Default.highlevel
+        TxtLowBg.Text = My.Settings1.Default.lowlevel
 
-        TxtPnum.Text = Settings1.Default.phonenumber
-        TxtMsgHigh.Text = Settings1.Default.msghigh
-        TxtMsgLow.Text = Settings1.Default.msglow
+        TxtPnum.Text = My.Settings1.Default.phonenumber
+        TxtMsgHigh.Text = My.Settings1.Default.msghigh
+        TxtMsgLow.Text = My.Settings1.Default.msglow
         Me.BackgroundImage = Main.BackgroundImage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Settings1.Default.username = txtUsername.Text
+        My.Settings1.Default.username = txtUsername.Text
 
-        Settings1.Default.password = txtPassword.Text
+        My.Settings1.Default.password = txtPassword.Text
 
-        Settings1.Default.highlevel = txtHighBg.Text
-        Settings1.Default.lowlevel = TxtLowBg.Text
+        My.Settings1.Default.highlevel = txtHighBg.Text
+        My.Settings1.Default.lowlevel = TxtLowBg.Text
 
-        Settings1.Default.phonenumber = TxtPnum.Text
-        Settings1.Default.msghigh = TxtMsgHigh.Text
-        Settings1.Default.msglow = TxtMsgLow.Text
-        Settings1.Default.Save()
+        My.Settings1.Default.phonenumber = TxtPnum.Text
+        My.Settings1.Default.msghigh = TxtMsgHigh.Text
+        My.Settings1.Default.msglow = TxtMsgLow.Text
+        My.Settings1.Default.Save()
         Main.update_all()
         Me.Close()
 

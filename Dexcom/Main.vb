@@ -92,8 +92,8 @@ Public Class Main
 
 
             list.Add(New XDate(Convert.ToDateTime(all_times(i))), all_values(i))
-            list2.Add(New XDate(Convert.ToDateTime(all_times(i))), Settings1.Default.highlevel)
-            list3.Add(New XDate(Convert.ToDateTime(all_times(i))), Settings1.Default.lowlevel)
+            list2.Add(New XDate(Convert.ToDateTime(all_times(i))), My.Settings1.Default.highlevel)
+            list3.Add(New XDate(Convert.ToDateTime(all_times(i))), My.Settings1.Default.lowlevel)
         Next
 
         zgc.GraphPane.Fill = New Fill(Color.Black)
@@ -181,9 +181,9 @@ Public Class Main
             Dim Response As HttpResponseMessage
             Dim ApiPoint = $"https://shareous1.dexcom.com/ShareWebServices/Services/General/AuthenticatePublisherAccount"
             Dim accountIdRequestJson = JsonConvert.SerializeObject(New With {Key _
-                .accountName = Settings1.Default.username, Key _
+                .accountName = My.Settings1.Default.username, Key _
                 .applicationId = "d8665ade-9673-4e27-9ff6-92db4ce13d13", Key _
-                .password = Settings1.Default.password
+                .password = My.Settings1.Default.password
             })
             Dim accountIdRequest = New HttpRequestMessage(HttpMethod.Post, New Uri(ApiPoint)) With {
         .Content = New StringContent(accountIdRequestJson, Encoding.UTF8, "application/json")
@@ -200,7 +200,7 @@ Public Class Main
             Dim sessionIdRequestJson = JsonConvert.SerializeObject(New With {Key _
                 .accountId = accountId, Key _
                 .applicationId = "d8665ade-9673-4e27-9ff6-92db4ce13d13", Key _
-                .password = Settings1.Default.password
+                .password = My.Settings1.Default.password
             })
             Dim url = $"https://shareous1.dexcom.com/ShareWebServices/Services/General/LoginPublisherAccountById"
             Dim accountSessionIdRequest = New HttpRequestMessage(HttpMethod.Post, New Uri(url)) With {
@@ -225,14 +225,14 @@ Public Class Main
             f_str_list.Clear()
             If (result(0).Value < 55) And (mark_low = False) Then
                 mark_low = True
-                send_msg(Settings1.Default.msglow)
+                send_msg(My.Settings1.Default.msglow)
             ElseIf (result(0).Value > 65) Then
                 mark_low = False
             End If
 
             If (result(0).Value > 300) And (mark_high = False) Then
                 mark_high = True
-                send_msg(Settings1.Default.msghigh)
+                send_msg(My.Settings1.Default.msghigh)
             ElseIf (result(0).Value < 250) Then
                 mark_high = False
             End If
@@ -393,7 +393,7 @@ Public Class Main
 
     Private Sub send_msg(msg As String)
         Dim web As WebBrowser = New WebBrowser
-        web.Navigate(String.Format("whatsapp://send?phone={0}&text={1}", Settings1.Default.phonenumber, msg.Replace(" ", "+")))
+        web.Navigate(String.Format("whatsapp://send?phone={0}&text={1}", My.Settings1.Default.phonenumber, msg.Replace(" ", "+")))
 
         Timer1.Start()
     End Sub
